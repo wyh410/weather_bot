@@ -1,1 +1,1 @@
-web:gunicorn line_echobot.wsgi --log-file -
+webi: gunicorn line_echobot.wsgi --log-file -
