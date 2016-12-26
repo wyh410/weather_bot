@@ -15,7 +15,7 @@ line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
 
 API_KEY=get_env_variable('API_KEY')
-cities = ["臺北","新北","桃園","臺中","臺南","高雄","基隆","新竹縣","新竹市","苗栗","彰化","南投","雲林","嘉義縣","嘉義市","屏東","宜蘭","花蓮","臺東","澎湖","金門","連江","台北","台中","台南","台東"]
+cities = ["臺北","新北","桃園","臺中","臺南","高雄","基隆","新竹縣","新竹市","苗栗","彰化","南投","雲林","嘉義縣","嘉義市","屏東","宜蘭","花蓮","臺東","澎湖","金門","連江"]
 
 def retrieve_data(place):
         url = 'http://opendata.cwb.gov.tw/opendataapi?dataid=F-C0032-001&authorizationkey=' + API_KEY
@@ -47,16 +47,7 @@ def callback(request):
 					if "天氣" in event.message.text:
 						for city in cities:
 							if city in event.message.text:
-								if city == "台北":
-									reply = retrieve_data("臺北")
-								elif city == "台中":
-									reply = retrieve_data("臺中")
-								elif city == "台南":
-									reply = retrieve_data("臺南")
-								elif city == "台東"
-									reply = retrieve_data("臺東")
-								else:
-									reply = retrieve_data(city)
+								reply = retrieve_data(city)
 							else:
 								reply = retrieve_data("臺南")
 					else:
