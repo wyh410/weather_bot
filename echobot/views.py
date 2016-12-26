@@ -15,7 +15,7 @@ parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
 def callback(request):
 	if request.method == 'POST':
 		signature = request.META['HTTP_X_LINE_SIGNATURE']
-		body = request.body.decode('uutf-8')
+		body = request.body.decode('utf-8')
 
 		try:
 			events = parser.parse(body,signature)
