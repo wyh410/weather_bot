@@ -4,7 +4,7 @@ This document will show you how to set up the environment for my weather bot.
 
 Create line bot account
 ------------------------------
-1.First, go to this webpage https://business.line.me/en/services/bot and click "Start using Messaging API" to create an account for the weather bot.
+1.First, go to this webpage https://business.line.me/en/services/bot and click "Start using Messaging API" to create an account for the weather bot.  
 2.After finishing the account settings, click the "Accounts" tab above and go to LINE@ MANAGER of the account you just created.
 3.On the left side of the page, just right below the bot name is the id of the bot, which begins with an "@".
   You can friend the account using this id. But be aware that there is a limit of 50 for the number of friends that the bot can have.
