@@ -41,6 +41,7 @@ def callback(request):
 		except LineBotApiError:
 			return HttpResponseBadRequest()
 
+		find = 0
 		for event in events:
                 	if isinstance(event,MessageEvent):
                         	if isinstance(event.message,TextMessage):
@@ -48,8 +49,10 @@ def callback(request):
 						for city in cities:
 							if city in event.message.text:
 								reply = retrieve_data(city)
-							else:
-								reply = retrieve_data("臺南")
+								find = 1
+								break
+						if find == 0:
+							reply = retrieve_data("臺南")
 					else:
 						reply = event.message.text
                                 	line_bot_api.reply_message(
