@@ -17,7 +17,7 @@ parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
 cities = ["臺北","新北","桃園","臺中","臺南","高雄","基隆","新竹縣","新竹市","苗栗","彰化","南投","雲林","嘉義縣","嘉義市","屏東","宜蘭","花蓮","臺東","澎湖","金門","連江"]
 
 def retrieve_data(place):
-        url = 'http://opendata.cwb.gov.tw/opendataapi?dataid=F-C0032-001&authorizationkey=' + API_KEY
+        url = 'http://opendata.cwb.gov.tw/opendataapi?dataid=F-C0032-001&authorizationkey={API_KEY}'.format(API_KEY=settings.API_KEY) 
         filehandle = urlopen(url)
         tree = ET.parse(filehandle)
         root = tree.getroot()
