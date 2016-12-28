@@ -43,8 +43,8 @@ def callback(request):
 
 		find = 0
 		for event in events:
-        	if isinstance(event,MessageEvent):
-            	if isinstance(event.message,TextMessage):
+			if isinstance(event,MessageEvent):
+				if isinstance(event.message,TextMessage):
 					if "天氣" in event.message.text:
 						for city in cities:
 							if city in event.message.text:
