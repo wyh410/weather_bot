@@ -43,8 +43,8 @@ def callback(request):
 
 		find = 0
 		for event in events:
-                	if isinstance(event,MessageEvent):
-                        	if isinstance(event.message,TextMessage):
+        	if isinstance(event,MessageEvent):
+            	if isinstance(event.message,TextMessage):
 					if "天氣" in event.message.text:
 						for city in cities:
 							if city in event.message.text:
@@ -55,10 +55,10 @@ def callback(request):
 							reply = retrieve_data("臺南")
 					else:
 						reply = event.message.text
-                                	line_bot_api.reply_message(
-                                        	event.reply_token,
-                                        	TextSendMessage(text=reply)
-                                	)
+					line_bot_api.reply_message(
+                    	event.reply_token,
+                        TextSendMessage(text=reply)
+                    )
 
 
 		return HttpResponse()
