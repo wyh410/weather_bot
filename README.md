@@ -58,6 +58,10 @@ And then go back to LINE Developers of your bot, set the webhook url to
 the web page of the project you just push but add /echobot/callback/ in the end.
 (echobot is my heroku app name)
 ------------------------------------------
+For usage, enter any sentence including "天氣" and any counties in Taiwan in Chinese.
+And the weather bot will response to you the weather with the corresponding counties.
+If the sentence you entered did not contain any counties in Taiwan but including "天氣", then the weather bot will tell you the weather of Tainan(in Chinese).
+If you enter any other text messages, the weather bot simply just echos what you typed.
 You can chat with the weather bot now!
 If you just want to experience the function of the bot, my weather bot id is @mpj7236c, welcome to friend me! 
 
