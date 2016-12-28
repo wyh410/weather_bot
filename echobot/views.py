@@ -22,9 +22,9 @@ def retrieve_data(place):
         tree = ET.parse(filehandle)
         root = tree.getroot()
 
-        for node in root.iterfind('{urn:cwb:gov:tw:cwbcommon:0.1}location'):
+        for node in root.iterfind('.//{urn:cwb:gov:tw:cwbcommon:0.1}location'):
                 if place in node[0].text:
-                        weather = node.find('{urn:cwb:gov:tw:cwbcommon:0.1}parameterName')
+                        weather = node.find('.//{urn:cwb:gov:tw:cwbcommon:0.1}parameterName')
                         return node[0].text + weather.text
 
 @csrf_exempt
