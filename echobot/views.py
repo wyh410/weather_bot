@@ -14,7 +14,6 @@ import xml.etree.ElementTree as ET
 line_bot_api = LineBotApi(settings.LINE_CHANNEL_ACCESS_TOKEN)
 parser = WebhookParser(settings.LINE_CHANNEL_SECRET)
 
-API_KEY=get_env_variable('API_KEY')
 cities = ["臺北","新北","桃園","臺中","臺南","高雄","基隆","新竹縣","新竹市","苗栗","彰化","南投","雲林","嘉義縣","嘉義市","屏東","宜蘭","花蓮","臺東","澎湖","金門","連江"]
 
 def retrieve_data(place):
